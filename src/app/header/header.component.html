@@ -1,0 +1,52 @@
+<div class="nav-head">
+  <!--Navbar-->
+
+  <div class="nav-bar" id="navbar">
+    <div class="logo">
+      <img src="assets/images/logo-w.png" alt="" />
+    </div>
+    <ul id="menulinks">
+      <li class="active"><a class="headerLinks" href="#">Home</a></li>
+      <li>
+        <a class="headerLinks" href="#demo" (click)="moveTo('demo')">Demos</a>
+      </li>
+      <li>
+        <a class="headerLinks" href="#how" (click)="moveTo('how')"
+          >How It Looks</a
+        >
+      </li>
+      <li>
+        <a class="headerLinks" href="#features" (click)="moveTo('features')"
+          >Features</a
+        >
+      </li>
+      <li><a class="headerLinks" href="#">Contact us</a></li>
+      <button class="nav-btn">Purchase</button>
+    </ul>
+  </div>
+  <!--Navbar-->
+
+  <div class="container">
+    <div class="col-sm-5 left">
+      <p class="head">Shopify Sections Themes</p>
+
+      <p class="content" style="font-size: 60px; font-weight: 600">
+        Supermarket, Wholesale, Grocery, Retail
+      </p>
+      <button>Purchase Now</button>
+    </div>
+    <div class="col-sm-5 right">
+      <ngb-carousel
+        *ngIf="images"
+        [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators"
+      >
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="img-wrapper">
+            <img [src]="image" class="d-block w-60" />
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="content-container section" id="how">
+  <div class="container text-center mt-5">
+    <div class="header">
+      <h1>How It Looks</h1>
+      <p style="opacity: 0.5">
+        Our themes are fully Responsive and Mobile First Friendly!
+      </p>
+    </div>
+    <router-outlet>
+      <div class="links">
+        <ul class="list">
+          <li id="links">
+            <a href="#" routerLink="desktop" [skipLocationChange]="true">
+              Desktop</a
+            >
+          </li>
+
+          <li id="links">
+            <a href="#" routerLink="tablet" [skipLocationChange]="true">
+              Tablet</a
+            >
+          </li>
+          <li id="links">
+            <a href="#" routerLink="mobile" [skipLocationChange]="true">
+              Mobile</a
+            >
+          </li>
+        </ul>
+      </div>
+    </router-outlet>
+  </div>
+</div>
